@@ -1,4 +1,4 @@
-OBJS := main.o options.o
+OBJS := main.o cuda.o functions.o pthread.o
 
 EXECUTABLE := options
 
