@@ -1,4 +1,4 @@
-OBJS := main.o cuda.o functions.o pthread.o
+OBJS := main.o functions.o pthread.o
 
 EXECUTABLE := options
 
@@ -31,10 +31,9 @@ clean:
 	mv *.o $(SRCDIR)/
 	-rm -f *.o
 
+
 clean_all:
-	-rm -f *.o $(EXECUTABLE)
-	@rm -rf $(SRCDIR)
-
-
-quick:
-	@cp $(RESDIR)/* $(TARGETDIR)/
+	mkdir -p $(SRCDIR)
+	mv *.o $(SRCDIR)/
+	-rm -f *.o
+	-rm -f $(EXECUTABLE)
