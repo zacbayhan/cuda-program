@@ -37,4 +37,6 @@ $(EXECUTABLE): $(OBJS)
 
 clean:
 	make
-	-rm -f *.o
+	echo "attempting to make"
+	-rm -f *.o $(EXECUTABLE)
+	echo "removing oject files and EXECUTABLE files"
