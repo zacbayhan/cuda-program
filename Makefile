@@ -1,6 +1,6 @@
-OBJS := main.o functions.o pthread.o
+OBJS := main.o functions.o pthread.o #mycuda.o
 
-EXECUTABLE := options
+EXECUTABLE := recomendations
 
 SRCDIR := objFiles
 
@@ -20,20 +20,21 @@ DEFS :=
 INCLUDES :=
 LDFLAGS := -lm
 
+# Cuda specific files
+NVCC := nvcc
+CUDAFLAGS :=
+
+
+# Build Rules
 %.o: %.c %.h
 	$(CC) $(CFLAGS) $(DEFS) $(INCLUDES) -c $< -o $@
+
+#%.o: %.cu %.h
+	#$(NVCC) $(CUDAFLAGS) -c $< -o $@
 
 $(EXECUTABLE): $(OBJS)
 	$(CC) $(CFLAGS) $(DEFS) $(INCLUDES) $(OBJS) -o $@ $(LDFLAGS)
 
 clean:
-	mkdir -p $(SRCDIR)
-	mv *.o $(SRCDIR)/
+	make
 	-rm -f *.o
-
-
-clean_all:
-	mkdir -p $(SRCDIR)
-	mv *.o $(SRCDIR)/
-	-rm -f *.o
-	-rm -f $(EXECUTABLE)
