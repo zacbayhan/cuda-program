@@ -8,7 +8,7 @@ int main(int argc, char *argv[]) {
   int NUM_THREADS = sysconf(_SC_NPROCESSORS_ONLN);
 
 
-  int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*start)(void *), void *arg);
+  //int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*start)(void *), void *arg);
 
 
 
