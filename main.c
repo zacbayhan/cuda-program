@@ -5,7 +5,9 @@ int main(int argc, char *argv[]) {
 
   int len;
   double *intake;
+  int proc = sysconf(_SC_NPROCESSORS_ONLN);
 
+  printf("this computer has %i processors\n", proc);
   intake = (double*)malloc(argc*sizeof(double));
   printf("Arguments passed in: %i \n", argc);
   printf("size of intake: %ld\n", sizeof(intake));

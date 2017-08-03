@@ -18,7 +18,7 @@ CFLAGS := -O3 -std=c99 -Wall -Wno-unused-variable
 
 DEFS :=
 INCLUDES :=
-LDFLAGS := -lm
+LDFLAGS := -lm -pthread
 
 # Cuda specific files
 NVCC := nvcc
