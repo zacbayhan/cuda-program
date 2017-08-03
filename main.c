@@ -17,6 +17,12 @@ int main(int argc, char *argv[]) {
     }
   }
 
+	least_square();
+	mat_fact();
+	dot();
+	mat_vec();
+	power();
+	neighbor();
 
 
   free(intake);
