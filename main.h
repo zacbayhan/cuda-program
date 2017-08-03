@@ -6,7 +6,6 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include <unistd.h>
-#include <pthread.h>
-void *PrintHello(void *threadid);
+
+
 #endif

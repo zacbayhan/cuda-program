@@ -5,7 +5,12 @@
 #include <stdio.h>
 #include <string.h>
 
+#include <pthread.h>
 
+
+#include <unistd.h>
+
+void *PrintHello(void *threadid);
 
 
 void least_square();
