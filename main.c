@@ -7,6 +7,11 @@ int main(int argc, char *argv[]) {
   double *intake;
   int proc = sysconf(_SC_NPROCESSORS_ONLN);
 
+
+  int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*start)(void *), void *arg);
+
+
+
   printf("this computer has %i processors\n", proc);
   intake = (double*)malloc(argc*sizeof(double));
   printf("Arguments passed in: %i \n", argc);

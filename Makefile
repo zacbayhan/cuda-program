@@ -24,7 +24,6 @@ LDFLAGS := -lm -pthread
 NVCC := nvcc
 CUDAFLAGS :=
 
-
 # Build Rules
 %.o: %.c %.h
 	$(CC) $(CFLAGS) $(DEFS) $(INCLUDES) -c $< -o $@
@@ -37,6 +36,6 @@ $(EXECUTABLE): $(OBJS)
 
 clean:
 	make
-	-echo "attempting to make"
+	echo "attempting to make"
 	-rm -f *.o $(EXECUTABLE)
 	echo "removing oject files and EXECUTABLE files"
