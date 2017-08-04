@@ -3,3 +3,8 @@ install: make
 dist: trusty
 compiler: gcc
 script: make clean
+deploy:
+  provider: script
+  script: scripts/deploy.sh
+  on:
+    branch: master
