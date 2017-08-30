@@ -1,4 +1,4 @@
-OBJS := main.o functions.o #mycuda.o
+OBJS := main.o functions.o mem.o #mycuda.o
 
 EXECUTABLE := recomendations
 

@@ -7,6 +7,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "functions.h"
-
+#include "mem.h"
 
 #endif

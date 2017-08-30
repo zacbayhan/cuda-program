@@ -1,6 +1,5 @@
-#include "memory.h"
+#include "mem.h"
 
-/* 09/12/02-10/10/02, updated 02/07/08, 02/23/16 by Matthias K. Gobbert */
 
 int *allocate_int_vector (int n)
 {
