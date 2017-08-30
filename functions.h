@@ -4,11 +4,13 @@
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
-
+#include <stdlib.h>
 #include <pthread.h>
-
-
 #include <unistd.h>
+
+#include "main.h"
+
+
 
 void *PrintHello(void *threadid);
 
@@ -19,6 +21,10 @@ void dot();
 void mat_vec();
 void power();
 void neighbor();
+double rmse(double RMSE, int len, double *intake);
+
+
+
 
 #ifdef cblas
 

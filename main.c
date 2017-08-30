@@ -3,20 +3,24 @@
 
 int main(int argc, char *argv[]) {
 
-  int len;
+  // define varibles
+  int len = argc-1;
+  double RMSE;
   double *intake;
 
-  intake = (double*)malloc(argc*sizeof(double));
-  
-  printf("Arguments passed in: %i \n", argc);
-  printf("size of intake: %ld\n", sizeof(intake));
+  //allocate vectors
+  intake = (double*)malloc(len*sizeof(double));
 
-  for (int i = 0; i < argc; i++) {
-    if(i > 0) {
-      intake[i] = atof(argv[i]);
-      printf("argv[%i]: %f \n", i-1, intake[i]);
-    }
+  //handle command line inputs
+  for(int i=1; i < argc; i++){
+      intake[i-1] = (double)atof(argv[i]);
   }
+
+  //main loop here
+  RMSE = rmse(RMSE, len, intake);
+  printf("RMSE %G\n", RMSE);
+
+/*
 
 	least_square();
 	mat_fact();
@@ -24,7 +28,7 @@ int main(int argc, char *argv[]) {
 	mat_vec();
 	power();
 	neighbor();
-
+*/
 
   free(intake);
   return 0;

@@ -1,5 +1,26 @@
 #include "functions.h"
 
+double rmse(double RMSE, int len, double *intake){
+
+  double diff=0;
+  double n = len/2; //one half the length of the column vector
+
+  printf(" elements passed into rmse: %i\n", len);
+
+  for (int i=0; i<len; i+=2){
+    //printf("i[%i]: %G i[%i]:%G \n", i, intake[i], i+1, intake[i+1]);
+    diff+=pow(intake[i+1]-intake[i],2);
+  }
+
+  RMSE = sqrt(1/n*diff);
+
+return RMSE;
+
+}
+
+
+
+
 
 void least_square(){
 printf("inside least_square\n");
@@ -17,6 +38,7 @@ int rc;
 long t;
 for(t=0;t<NUM_THREADS;t++){
   printf("In main: creating thread %ld\n", t);
+
   rc = pthread_create(&threads[t], NULL, PrintHello, (void *)t);
   if (rc){
     printf("ERROR; return code from pthread_create() is %d\n", rc);

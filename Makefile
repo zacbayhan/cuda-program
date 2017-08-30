@@ -35,7 +35,5 @@ $(EXECUTABLE): $(OBJS)
 	$(CC) $(CFLAGS) $(DEFS) $(INCLUDES) $(OBJS) -o $@ $(LDFLAGS)
 
 clean:
-	make
-	echo "attempting to make"
-	-rm -f *.o $(EXECUTABLE)
-	echo "removing oject files and EXECUTABLE files"
+	echo "cleaning *.o files \n"
+	-rm -f *.o
