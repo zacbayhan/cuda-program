@@ -2,7 +2,7 @@ language: c
 install: make
 dist: trusty
 compiler: gcc
-script: make clean
+script: make
 deploy:
   provider: script
   script: scripts/deploy.sh
