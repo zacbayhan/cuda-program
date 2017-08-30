@@ -1,7 +1,9 @@
 language: c
 install: make
 dist: trusty
-compiler: gcc
+compiler:
+  - gcc
+  - clang
 script: make && make clean && rm recomendations
 deploy:
   provider: script
