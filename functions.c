@@ -25,7 +25,6 @@ printf("inside mat_fact\n");
 }
 
 void dot(){
-
     int NUM_THREADS = sysconf(_SC_NPROCESSORS_ONLN);
     printf("this computer has %i processors\n", NUM_THREADS);
 
