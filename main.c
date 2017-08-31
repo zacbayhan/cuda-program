@@ -12,7 +12,7 @@ int main(int argc, char *argv[]) {
   intake = (double*)malloc(len*sizeof(double));
 
   //handle command line inputs
-  for(int i=1; i < argc; i++){
+  for(int i=1; i < argc; i++) {
       intake[i-1] = (double)atof(argv[i]);
   }
 
