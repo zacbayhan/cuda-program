@@ -14,5 +14,6 @@ jobs:
     - ls src/
     - make
     - echo ${TRAVIS_PULL_REQUEST_BRANCH:-$TRAVIS_BRANCH}
-    - ls src/
+    - ls -la
+    - ./build/a.out 23 43 23 43
     after_success: ./merge.sh
