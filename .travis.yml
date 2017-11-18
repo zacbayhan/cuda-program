@@ -12,6 +12,7 @@ jobs:
     - make -v && gcc -v
     - echo entering make stage \(compile, identify branch, clean\)
     - ls src/
+    - make
     - echo ${TRAVIS_PULL_REQUEST_BRANCH:-$TRAVIS_BRANCH}
     - ls src/
     after_success: ./merge.sh
