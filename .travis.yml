@@ -5,9 +5,6 @@ before_install: echo starting nav_station\'s automated build and deployment pipe
 compiler: gcc
 stages:
 - make
-- testing
-- name: deploy
-  if: branch = master
 jobs:
   include:
   - stage: make
