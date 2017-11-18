@@ -1,7 +1,8 @@
 language: c
 dist: trusty
 compiler: gcc
-install: make
+sudo: required
+script: sudo apt-get install make
 stages:
 - make
 jobs:
