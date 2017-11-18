@@ -1,4 +1,4 @@
 ./*.o
 recomendations
 scrap
-./build
+./build/*
