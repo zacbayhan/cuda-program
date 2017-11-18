@@ -9,6 +9,7 @@ jobs:
   include:
   - stage: make
     script:
+    - make -v && gcc -v
     - echo entering make stage \(compile, identify branch, clean\)
     - ls src/
     - echo ${TRAVIS_PULL_REQUEST_BRANCH:-$TRAVIS_BRANCH}
