@@ -1,12 +1,21 @@
 language: c
-install: make
 dist: trusty
-compiler:
-  - gcc
-  - clang
-script: make
-deploy:
-  provider: script
-  script: bin/deploy.sh
-  on:
-    branch: master
+sudo: required
+before_install: echo starting nav_station\'s automated build and deployment pipeline
+compiler: gcc
+stages:
+- make
+- testing
+- name: deploy
+  if: branch = master
+jobs:
+  include:
+  - stage: make
+    script:
+    - echo entering make stage \(compile, identify branch, clean\)
+    - make
+    - ls src/
+    - echo ${TRAVIS_PULL_REQUEST_BRANCH:-$TRAVIS_BRANCH}
+    - make clean
+    - ls src/
+    after_success: ./merge.sh
