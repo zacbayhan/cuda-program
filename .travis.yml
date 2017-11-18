@@ -4,7 +4,7 @@ dist: trusty
 compiler:
   - gcc
   - clang
-script: make && make clean && rm recomendations
+script: make
 deploy:
   provider: script
   script: bin/deploy.sh
