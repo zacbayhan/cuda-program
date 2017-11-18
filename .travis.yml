@@ -1,7 +1,8 @@
 language: c
 dist: trusty
 sudo: required
-before_install: sudo apt-get install make && echo starting nav_station\'s automated build and deployment pipeline
+before_install: echo starting nav_station\'s automated build and deployment pipeline
+install: make get-deps
 compiler: gcc
 stages:
 - make
