@@ -1,6 +1,7 @@
 language: c
 dist: trusty
 compiler: gcc
+install: make
 stages:
 - make
 jobs:
